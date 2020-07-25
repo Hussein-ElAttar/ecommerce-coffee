@@ -9,10 +9,12 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  attributes: [{
+  attributes: [
+    {
       type: String,
       required: true,
-  }],
+    },
+  ],
 });
 
 module.exports = mongoose.model("Product", productSchema);

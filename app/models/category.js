@@ -5,11 +5,11 @@ const categorySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  path:{
+  path: {
     type: String,
     lowercase: true,
     required: true,
-    index: { unique: true } ,
+    index: { unique: true },
   },
 });
 
