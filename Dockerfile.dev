@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR /src/ecommerce
+
+EXPOSE 3000
+
+COPY app/package.json ./
+
+RUN npm install
+
+CMD ["npm", "run","start:dev"]
