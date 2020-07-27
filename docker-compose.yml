@@ -4,6 +4,7 @@ volumes:
 
 services:
   ecommerce:
+    container_name: ecommerce-app
     build:       
       context: ./
       dockerfile: Dockerfile.dev
