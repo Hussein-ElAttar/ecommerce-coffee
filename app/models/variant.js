@@ -7,12 +7,12 @@ const variantSchema = new mongoose.Schema(
       required: true,
       index: { unique: true },
     },
-    productId: {
+    product: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Product",
     },
   },
-  { strict: false, _id: false }
+  { strict: false, versionKey: false }
 );
 
 module.exports = mongoose.model("Variant", variantSchema);

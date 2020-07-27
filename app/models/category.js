@@ -11,6 +11,6 @@ const categorySchema = new mongoose.Schema({
     required: true,
     index: { unique: true },
   },
-});
+},{versionKey: false });
 
 module.exports = mongoose.model("Category", categorySchema);

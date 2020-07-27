@@ -11,12 +11,12 @@ module.exports.seed = async () => {
 
   return Product.insertMany([
     {
-      category_id: coffeeMachineCategory,
+      category: coffeeMachineCategory,
       name: "Coffee Machine",
       attributes: ["size", "model", "water_line_compatible"],
     },
     {
-      category_id: espressoMachineCategory,
+      category: espressoMachineCategory,
       name: "Espresso Machine",
       attributes: ["model", "water_line_compatible"],
     }
