@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 // Seeders
 const categorySeeder = require("./category");
 const productSeeder = require("./product");
-const variantSeeder = require("./variant");
 
 async function runSeeders() {
   await mongoose.connect(MONGO_DB_URI, MONGO_DB_CONNECTION_OPTIONS);
@@ -12,12 +11,10 @@ async function runSeeders() {
   await Promise.all([
     categorySeeder.drop(),
     productSeeder.drop(),
-    variantSeeder.drop()
   ]);
 
   await categorySeeder.seed();
   await productSeeder.seed();
-  await variantSeeder.seed();
 }
 
 runSeeders();
