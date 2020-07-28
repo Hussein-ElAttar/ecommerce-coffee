@@ -6,8 +6,11 @@ module.exports.drop = async () => {
 }
 
 module.exports.seed = async () => {
+  // No need to load all at once since this is a seeder file.
   const coffeeMachineCategory = await Category.findOne({ path: "machines/coffee-machines" });
   const espressoMachineCategory = await Category.findOne({ path: "machines/espresso-machines" });
+  const coffeePodsCategory = await Category.findOne({ path: "pods/coffee-pods" });
+  const espressoPodsCategory = await Category.findOne({ path: "pods/espresso-pods" });
 
   return Product.insertMany([
     // CM001 – small machine, base model
@@ -104,6 +107,38 @@ module.exports.seed = async () => {
       attributes: {
         model: "deluxe",
         water_line_compatible: "1",
+      }
+    },
+    // CP001 – small coffee pod, 1 dozen, vanilla
+    {
+      sku: "CP001",
+      name: "Coffee pod - small coffee pod, 1 dozen, vanilla",
+      category: coffeePodsCategory,
+      attributes: {
+        flavor: "vanilla",
+        packsize: "1 dozen",
+        size: "small",
+      }
+    },
+    // CP011 – small coffee pod, 1 dozen, caramel
+    {
+      sku: "CP011",
+      name: "Coffee pod - small coffee pod, 1 dozen, caramel",
+      category: espressoPodsCategory,
+      attributes: {
+        flavor: "caramel",
+        packsize: "1 dozen",
+        size: "small",
+      }
+    },
+    // EP003 – espresso pod, 3 dozen, vanilla
+    {
+      sku: "EP003",
+      name: "Coffee pod - small coffee pod, 1 dozen, vanilla",
+      category: espressoPodsCategory,
+      attributes: {
+        flavor: "vanilla",
+        packsize: "3 dozen",
       }
     },
   ]);
