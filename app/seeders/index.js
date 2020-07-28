@@ -15,6 +15,7 @@ async function runSeeders() {
 
   await categorySeeder.seed();
   await productSeeder.seed();
+  console.log("Data re-seeded successfully")
 }
 
 runSeeders();
