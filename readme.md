@@ -2,10 +2,14 @@
 
 1- clone the repo and cd into project root
 
-2- Start the app:
+2- Add ```.env``` file with "MONGO_DB_URI" for the docker service, for example:
+
+   ```MONGO_DB_URI=mongodb://mongo/ecommerce```
+
+3- Start the app:
 ``` docker-compose up ```
 
-3- Run seeders:
+4- Run seeders:
 ``` docker exec -it ecommerce-app node seeders/index.js ```
 
 ## Running the project with local dependancies:
@@ -15,7 +19,9 @@
 
 3- ``` npm install ```
 
-4- ``` node index.js ```
+4- Add mongodb uri for config file in ```app/config/db.js```
+
+5- ``` node index.js ```
 
 
 ## Test case scenarios:
