@@ -29,7 +29,8 @@
 * Get water line compatible proucts => "/api/v1/products?filters[water_line_compatible]=1"
 * Get Espresso-Machines products only => "/api/v1/products?categoryName=Espresso-Machines"
 * Get Espresso-Pods only with flavor vanilla => "/api/v1/products?categoryName=Espresso-Pods&filters[flavor]=vanilla"
-... etc
+
+   ... etc
 
 Note: 
     Not all task seeds are included but they are handled with two parameters
